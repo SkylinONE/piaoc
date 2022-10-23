@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人博客</title>
+  <!-- 调用轮播图css动画 -->
+  <link rel="stylesheet" href="../html/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../html/css/all.css">
+  <link rel="stylesheet" href="../html/css/favorite.css">
+  <link rel="stylesheet" href="./css/music.css">
+  <!-- 调用矢量图 -->
+  <link rel="stylesheet" href="./css/font_v4yqm0i7md/iconfont.css">
+</head>
+
+<body>
+  <div class="nav">
+    <ul>
+      <li><a href="../index.html">HOME&nbsp;&nbsp;&nbsp;|</a></li>
+      <li><a href="favorite.html">FAVORITE&nbsp;&nbsp;&nbsp;|</a></li>
+      <li><a href="./about.html">ABOUT&nbsp;&nbsp;&nbsp;|</a></li>
+      <li><a href="./study.html">STUDY&nbsp;&nbsp;&nbsp;|</a></li>
+      <li><a href="./work.html">WORK&nbsp;&nbsp;&nbsp;|</a></li>
+      <div class="nav-end">
+        <div class="img"></div><span>Jack</span>
+      </div>
+    </ul>
+  </div>
+
+  <div class="top">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="formation"><a href="#animation" target="_parent">know more about</a></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="formation"><a href="#game" target="_parent">know more about</a></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="formation"><a href="#pet" target="_parent">know more about</a></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="formation"><a href="#game" target="_parent">know more about</a></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="formation"><a href="#" target="_parent">know more about</a></div>
+        </div>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+
+      <!-- 如果需要导航按钮 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+  <!-- 轮播图调用js -->
+  <script src="../html/js/swiper-bundle.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper', {
+      loop: true, // 循环模式选项
+
+      // 如果需要分页器
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // 如果需要前进后退按钮
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    })
+    timer()      
+  </script>
+
+  <!-- 第二页 -->
+  <div class="secondpage">
+    <!-- 暂且没想好写啥 -->
+    <!-- music -->
+    <div class="player">
+      <!-- 音乐播图 -->
+      <section class="img">
+          <img src="" alt="" id="big-img">
+      </section>
+
+      <!-- 音乐信息 -->
+      <section class="info">
+          <!-- 进度条 -->
+          <div class="progress">
+              <div id="start">0:00</div>
+              <div id="bar"></div>
+              <div id="end">3:15</div>
+          </div>
+
+          <!-- 歌曲信息 -->
+          <div class="song-detail">
+              <span id="title"></span>
+              <span id="author"></span>
+          </div>
+
+          <!-- 按钮区域 -->
+          <div id="controls" class="controls">
+              <!--  -->
+              <span><i class="iconfont icon-danlieliebiao"></i></span>
+              <div class="play">
+                  <span><i id="voice" class="iconfont icon-shengyin_shiti"></i></span>
+                  <span><i id="pre" class="iconfont icon-shangyishou"></i></span>
+                  <span><i id="play" class="iconfont icon-24gf-play"></i></span>
+                  <span><i id="next" class="iconfont icon-xiayishou"></i></span>
+                  <span><i id="mode" class="iconfont icon-suiji"></i></span>
+              </div>
+              <span><i id="voice" class="iconfont icon-tianjia"></i></span>
+          </div>
+      </section>
+      <!-- audio标签 -->
+      <section class="audio">
+          <audio id="audio" controls src=""></audio>
+      </section>
+  </div>
+  <!-- 文字内容 -->
+  <div class="fontformation">
+    <h2>Let's Listen <br> <div class="to">to</div>Some Music</h2>
+    <!-- 右侧 -->
+    <div class="rightformation">
+      <h2>Come&nbsp;&nbsp;On!</h2>
+    </div>
+  </div>
+  <!-- gif动画插入 -->
+  <img src="./music/img/OGC.gif" alt="">
+  <div class="rightimg"><img src="./music/img/OGC2.gif" alt=""></div>
+    <!-- 箭头动画 -->
+    <div class="arrows">
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+    </div>
+  </div>
+  <!-- 第三页animation -->
+  <div class="thirdpage">
+    
+    <!-- animation css -->
+    <div class="cartton">
+      <div class='at-container'>
+        <div class='box'><a id="animation">动漫</a></div>
+      </div>
+
+      <!-- 动画播放图 -->
+      <div class="page">
+    
+        <div class="container">
+          
+          <div class="photo-container">
+            <div class="photo-cont-item animation-1">
+              <div class="photo-item photo-1"></div>
+              <div class="photo-item photo-2"></div>
+              <div class="photo-item photo-3"></div>
+              <div class="photo-item photo-4"></div>
+              <div class="photo-item photo-5"></div>
+              <div class="photo-item photo-6"></div>
+              
+              <div class="photo-item photo-1"></div>
+              <div class="photo-item photo-2"></div>
+              <div class="photo-item photo-3"></div>
+              <div class="photo-item photo-4"></div>
+              <div class="photo-item photo-5"></div>
+              <div class="photo-item photo-6"></div>
+            </div>
+     
+            <div class="photo-cont-item animation-2">
+              <div class="photo-item photo-7"></div>
+              <div class="photo-item photo-8"></div>
+              <div class="photo-item photo-9"></div>
+              <div class="photo-item photo-10"></div>
+              <div class="photo-item photo-11"></div>
+              <div class="photo-item photo-12"></div>
+              
+              <div class="photo-item photo-7"></div>
+              <div class="photo-item photo-8"></div>
+              <div class="photo-item photo-9"></div>
+              <div class="photo-item photo-10"></div>
+              <div class="photo-item photo-11"></div>
+              <div class="photo-item photo-12"></div>
+            </div>
+     
+            <div class="photo-cont-item animation-3">
+              <div class="photo-item photo-13"></div>
+              <div class="photo-item photo-14"></div>
+              <div class="photo-item photo-15"></div>
+              <div class="photo-item photo-16"></div>
+              <div class="photo-item photo-17"></div>
+              <div class="photo-item photo-18"></div>
+              
+              <div class="photo-item photo-13"></div>
+              <div class="photo-item photo-14"></div>
+              <div class="photo-item photo-15"></div>
+              <div class="photo-item photo-16"></div>
+              <div class="photo-item photo-17"></div>
+              <div class="photo-item photo-18"></div>
+            </div>
+
+            <div class="photo-cont-item animation-4">
+              <div class="photo-item photo-19"></div>
+              <div class="photo-item photo-20"></div>
+              <div class="photo-item photo-21"></div>
+              <div class="photo-item photo-22"></div>
+              <div class="photo-item photo-23"></div>
+              <div class="photo-item photo-24"></div>
+              
+              <div class="photo-item photo-19"></div>
+              <div class="photo-item photo-20"></div>
+              <div class="photo-item photo-21"></div>
+              <div class="photo-item photo-22"></div>
+              <div class="photo-item photo-23"></div>
+              <div class="photo-item photo-24"></div>
+            </div>
+
+          </div><!-- .photo-container -->
+          
+        </div><!-- .container -->
+       
+     </div>
+  </div>
+    </div>
+
+    <!-- 动漫 -->
+    
+    <!-- 第四页宠物九宫格 -->
+    <div class="forthpage">
+      <br><br>
+      <!-- animation css -->
+      <div class="cartton">
+      <div class='at-container'>
+        <div class='box'><a id="pet">宠物</a></div>
+      </div>
+
+      <div class="parent">
+        <div class="item"> 
+          <img src="../html/image/pet/拉布拉多.jpg">
+          <div class="item-mask"></div>
+          <div class="item-title">
+            拉布拉多
+          </div>
+          <div class="item-content">
+            非常适合被选作经常出入公共场合的导盲犬或地铁警犬及搜救犬和其他工作犬的狗品种，因原产地在加拿大的纽芬兰与拉布拉多省而得名。
+          </div>
+        </div>
+        <div class="item">
+          <img src="../html/image/pet/柴犬.jpg">
+          <div class="item-mask"></div>
+          <div class="item-title">
+            柴犬
+          </div>
+          <div class="item-content">
+            柴犬是体型中等并且又最古老的日本犬，柴犬性格活泼、好动。对自己喜欢的玩具、会一天到晚的把玩。
+          </div>
+        </div>
+        <div class="item">
+          <img src="../html/image/pet/英短.jpg"> 
+          <div class="item-mask"></div>
+          <div class="item-title">
+            英短
+          </div>
+          <div class="item-content">
+            英国短毛猫起初是英国的街头流浪猫，但在育种者不断地优选下，形成了一个稳定的品种。
+          </div> 
+        </div>
+        <div class="item"> 
+          <img src="../html/image/pet/布偶.jpg"> 
+          <div class="item-mask"></div>
+          <div class="item-title">
+            布偶
+          </div>
+          <div class="item-content">
+            布偶猫抱起来像软绵绵的布偶，而且对人非常友善。它性格大胆，不知道什么叫恐惧，而且对疼痛的忍耐性相当强，因此很能容忍孩子的玩弄，是非常理想的家庭宠物。
+          </div> 
+        </div>
+        <div class="item"> 
+          <img src="../html/image/pet/暹罗猫.jpg"> 
+          <div class="item-mask"></div>
+          <div class="item-title">
+            暹罗猫
+          </div>
+          <div class="item-content">
+            这种珍贵的猫仅在泰国的皇宫和大寺院中饲养，是足不出户的贵族。暹罗猫能够较好适应主人当地的气候，且性格刚烈好动，机智灵活，好奇心特强，善解人意。
+          </div> 
+        </div>
+        <div class="item"> 
+          <img src="../html/image/pet/西伯利亚猫.jpg">
+          <div class="item-mask"></div>
+          <div class="item-title">
+            西伯利亚猫
+          </div>
+          <div class="item-content">
+            外层护毛质硬、光滑且呈油性，底层绒毛浓密厚实，体型巨大。
+          </div> 
+        </div>
+        <div class="item"> 
+          <img src="../html/image/pet/牧羊犬.jpg">
+          <div class="item-mask"></div>
+          <div class="item-title">
+            牧羊犬
+          </div>
+          <div class="item-content">
+            在农场负责警卫，避免牛、羊、马等逃走或遗失，也保护家畜免于熊或狼的侵袭，同时也大幅度的杜绝了偷盗行为。
+          </div> 
+        </div>
+        <div class="item"> 
+          <img src="../html/image/pet/哈士奇.jpg">
+          <div class="item-mask"></div>
+          <div class="item-title">
+            哈士奇
+          </div>
+          <div class="item-content">
+            其独特的嘶哑叫声，比较温顺，是一种流行于全球的宠物犬   ，被世界各地人们广泛饲养，并在全球范围内有大量该犬种的赛事。
+          </div> 
+        </div>
+        </div>
+    </div>
+  </div>
+  <!-- 第五页 -->
+  <div class="fifthpage">
+      <div class="boxbottom">
+        <div class="box">
+          <a id="game">游戏&运动</a>
+        </div>
+        <ul>
+          <li>
+             <a href="https://ys.mihoyo.com/main/"><img src="../html/image/games/原神.png" alt=""></a>
+             <div class="bottomtitle">
+              原神
+             </div>
+             <div class="bottommask"></div>
+             <div class="bottomcontent">
+              一个被称作“提瓦特”的幻想世界，在这里，被神选中的人将被授予“神之眼”，导引元素之力。玩家将扮演一位名为“旅行者”的神秘角色，在自由的旅行中邂逅性格各异、能力独特的同伴们，和他们一起击败强敌，找回失散的亲人——同时，逐步发掘“原神”的真相 。
+             </div>
+          </li>
+          <li>
+            <a href="https://pvp.qq.com/"><img src="../html/image/games/王者荣耀.png" alt=""></a>
+             <div class="bottomtitle">
+              王者荣耀
+             </div>
+             <div class="bottommask"></div>
+             <div class="bottomcontent">
+              王者荣耀中的玩法以竞技对战为主，玩家之间进行1V1、3V3、5V5等多种方式的PVP对战，在满足条件后可以参加游戏的排位赛等，还可以参加PVE的闯关模式，是属于推塔类型的游戏。
+             </div>
+          </li>
+          <li>
+            <a href="https://www.pq8.live/?channel=360-19"><img src="../html/image/games/羽毛球.png" alt=""></a>
+            <div class="bottomtitle">
+             羽毛球
+            </div>
+            <div class="bottommask"></div>
+            <div class="bottomcontent">
+              一项隔着球网，使用长柄网状球拍击打用羽毛和软木制作而成的一种小型球类的室内运动项目。羽毛球比赛在长方形的场地上进行，场地中间有网相隔，双方运用各种发球、击球和移动等技战术，将球在网上往返对击，以不使球落在本方有效区域内，或使对方击球失误为胜。
+            </div>
+          </li>
+        </ul>
+      </div>
+  </div>
+<script src="./js/music.js"></script>
+    <!-- 调用animation.js -->
+    <script src="./js/animation.js"></script>
+</html>

@@ -1,0 +1,727 @@
+:root {
+  --dark-text: #f8fbff;
+  --light-body: #f3f8fe;
+  --light-main: #fdfdfd;
+  --light-second: #c3c2c8;
+  --light-hover: #f0f0f0;
+  --light-text: #151426;
+  --light-btn: #9796f0;
+  --blue: #0000ff;
+  --white: #fff;
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --font-family: consolas;
+}
+
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.firstpage {
+  position: relative;
+  width: 99vw;
+  height: 100vh;
+  place-items: center;
+  font-family: var(--font-family);
+  background: linear-gradient(to right, #9796f0, #fbc7d4);
+  overflow: hidden;
+}
+
+/* navigation bar */
+.nav {
+  position: relative;
+  top: 5px;
+  margin: auto;
+  height: 40px;
+  width: 700px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.nav ul {
+  width: 100%;
+  height: 100%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.nav ul .nav-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* 如果导航栏就五个导航，那么每个导航的宽度是整个导航栏的五分之一 */
+  width: calc((100% / 5)*1);
+  height: 5px;
+  border-radius: 3px;
+  transition: .5s;
+}
+
+.nav ul li {
+  width: 100%;
+  text-align: center;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: rgb(70, 100, 180);
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.nav ul li:nth-child(1):hover~.nav-box {
+  left: calc(100% / 5 *0);
+  background-color: red;
+}
+
+.nav ul li:nth-child(2):hover~.nav-box {
+  left: calc(100% / 5 *1);
+  background-color: #d18df8;
+}
+
+.nav ul li:nth-child(3):hover~.nav-box {
+  left: calc(100% / 5 *2);
+  background-color: #ffb1b1;
+}
+
+.nav ul li:nth-child(4):hover~.nav-box {
+  left: calc(100% / 5 *3);
+  background-color: #8da1f8;
+}
+
+.nav ul li:nth-child(5):hover~.nav-box {
+  left: calc(100% / 5 *4);
+  background-color: #7df88e;
+}
+
+/* 边框动画 */
+.head-portrait {
+  margin: 200px auto;
+  position: relative;
+  width: 380px;
+  height: 420px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.head-portrait::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+.head-portrait::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.head-portrait .main {
+  position: absolute;
+  inset: 2px;
+  border-radius: 8px;
+  background: #28292d;
+  z-index: 10;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* h2 */
+.head-portrait .main h2 {
+  color: #45f3ff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+/* 头像设置 */
+.head-portrait .main .touxiang {
+  margin: 30px auto;
+  width: 200px;
+  height: 200px;
+  background-image: url(./html/image/头像.jpg);
+  background-size: cover;
+  border-radius: 50%;
+}
+
+/* 头像-bottom */
+.head-portrait .main .main-left {
+  background-color: #ccc;
+  text-align: center;
+}
+
+.head-portrait .main a {
+  text-decoration: none;
+  color: #8f8f8f;
+}
+
+.head-portrait .main a:hover {
+  color: #45f3ff;
+}
+
+/* content-left */
+.content-left {
+  position: absolute;
+  top: 30%;
+  left: 3%;
+}
+
+.content-left h1 {
+  font-size: 90px;
+  color: #fff;
+  line-height: 110px;
+  float: left;
+}
+
+/* 日历 */
+.contianer {
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  display: flex;
+  padding: 2% 0px 0px 0px;
+  justify-content: center;
+  top: 32%;
+  left: 38%;
+  width: 100%;
+  height: 100%;
+}
+
+.calendar {
+  height: 610px;
+  width: max-content;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 30px 50px 0px 50px;
+}
+
+.calendar {
+  box-shadow: var(--shadow);
+}
+
+.calendar-header {
+  background: #9796f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  color: var(--white);
+  padding: 10px;
+}
+
+.calendar-body {
+  pad: 10px;
+}
+
+.calendar-week-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: 600;
+  cursor: pointer;
+  color: rgb(104, 104, 104);
+}
+
+.calendar-week-days div:hover {
+  color: black;
+  transform: scale(1.2);
+  transition: all .2s ease-in-out;
+}
+
+.calendar-week-days div {
+  display: grid;
+  place-items: center;
+  color: var(--bg-second);
+  height: 50px;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  color: var(--color-txt);
+}
+
+.calendar-days div {
+  width: 37px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+  animation: to-top 1s forwards;
+}
+
+.month-picker {
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.month-picker:hover {
+  background-color: var(--color-hover);
+}
+
+.month-picker:hover {
+  color: var(--color-txt);
+}
+
+.year-picker {
+  display: flex;
+  align-items: center;
+}
+
+.year-change {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.year-change:hover {
+  background-color: var(--light-btn);
+  transition: all .2s ease-in-out;
+  transform: scale(1.12);
+}
+
+.year-change:hover pre {
+  color: var(--bg-body);
+}
+
+.calendar-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#year:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.2 ease-in-out;
+}
+
+.calendar-days div span {
+  position: absolute;
+}
+
+.calendar-days div:hover {
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  background-color: #fbc7d4;
+  border-radius: 20%;
+  color: var(--dark-text);
+}
+
+.calendar-days div.current-date {
+  color: var(--dark-text);
+  background-color: var(--light-btn);
+  border-radius: 20%;
+}
+
+.month-list {
+  position: relative;
+  left: 0;
+  top: -50px;
+  background-color: #ebebeb;
+  color: var(--light-text);
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 5px;
+  border-radius: 20px;
+}
+
+.month-list>div {
+  display: grid;
+  place-content: center;
+  margin: 5px 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.month-list>div>div {
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.month-list>div>div:hover {
+  background-color: var(--light-btn);
+  color: var(--dark-text);
+  transform: scale(0.9);
+  transition: all 0.2s ease-in-out;
+}
+
+.month-list.show {
+  visibility: visible;
+  pointer-events: visible;
+  transition: 0.6s ease-in-out;
+  animation: to-left .71s forwards;
+}
+
+.month-list.hideonce {
+  visibility: hidden;
+}
+
+.month-list.hide {
+  animation: to-right 1s forwards;
+  visibility: none;
+  pointer-events: none;
+}
+
+.date-time-formate {
+  width: max-content;
+  height: max-content;
+  font-family: Dubai Light, Century Gothic;
+  position: relative;
+  display: inline;
+  top: 140px;
+  justify-content: center;
+}
+
+.day-text-formate {
+  font-family: Microsoft JhengHei UI;
+  font-size: 1.4rem;
+  padding-right: 5%;
+  border-right: 3px solid #9796f0;
+  position: absolute;
+  left: -1rem;
+}
+
+.date-time-value {
+  display: block;
+  height: max-content;
+  width: max-content;
+  position: relative;
+  left: 40%;
+  top: -18px;
+  text-align: center;
+}
+
+.time-formate {
+  font-size: 1.5rem;
+}
+
+.time-formate.hideTime {
+  animation: hidetime 1.5s forwards;
+}
+
+.day-text-formate.hidetime {
+  animation: hidetime 1.5s forwards;
+}
+
+.date-formate.hideTime {
+  animation: hidetime 1.5s forwards;
+}
+
+.day-text-formate.showtime {
+  animation: showtime 1s forwards;
+}
+
+.time-formate.showtime {
+  animation: showtime 1s forwards;
+}
+
+.date-formate.showtime {
+  animation: showtime 1s forwards;
+}
+
+@keyframes to-top {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+}
+
+@keyframes to-left {
+  0% {
+    transform: translatex(230%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+
+@keyframes to-right {
+  10% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translatex(-150%);
+    opacity: 1;
+  }
+}
+
+@keyframes showtime {
+  0% {
+    transform: translatex(250%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translatex(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes hidetime {
+  0% {
+    transform: translatex(0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translatex(-370%);
+    opacity: 1;
+  }
+}
+
+@media (max-width:375px) {
+  .month-list>div {
+
+    margin: 5px 0px;
+  }
+}
+
+/* arrow */
+.frist{
+  position: absolute;
+  bottom: 0;
+}
+.arrow {
+  position: relative;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  border-top: 5px solid #fff;
+  border-left: 5px solid #fff;
+  transform: rotate(225deg);
+  animation: arrow-load 2s infinite;
+}
+
+.arrow:nth-child(1) {
+  top: 12px;
+  animation-delay: -0.4s;
+}
+
+.arrow:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow:nth-child(3) {
+  bottom: 12px;
+}
+
+@keyframes arrow-load {
+  0% {
+    opacity: 0;
+    transform: rotate(225deg) translate(30px, 30px);
+  }
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(225deg) translate(30px, 30px);
+  }
+}
+
+/* secondepge */
+.secondepge {
+  height: 100vh;
+  width: 99vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(243, 230, 241);
+}
+
+.shell {
+  width: 90%;
+  height: 700px;
+  display: flex;
+}
+
+.accordion {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, .5);
+  border-radius: 20px;
+  border: 10px solid #fff;
+  background: #fff;
+}
+
+.accordion>img {
+  width: 200%;
+  height: 85%;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.accordion>span {
+  font: 200 45px "优设标题黑";
+  text-align: center;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion:hover {
+  flex-basis: 40%;
+}
+
+.accordion:hover>img {
+  width: 100%;
+  height: 100%;
+}
+
+/* thirdpage */
+.thirdpage {
+  position: relative;
+  width: 99vw;
+  display: flex;
+  overflow: hidden;
+  background-color: rgba(216, 182, 221);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rollbox {
+  width: 1200px;
+  height: 500px;
+  position: relative;
+  background: #5296d5;
+  border-radius: 8px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  color: #ffffff;
+  transition: transform 1s ease, opacity 0.5s linear;
+}
+
+.rollbox .small {
+  width: 62px;
+  height: 44px;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  background-color: rgba(78, 230, 197, 0.2);
+  border-radius: 8px;
+}
+
+.rollbox:nth-child(1) {
+  opacity: 0;
+  background-image: url(./html/image/character.jpg);
+  background-size: cover;
+  background-position-y: -60px;
+}
+
+.rollbox:nth-child(2) {
+  opacity: 0;
+  background-image: url(./html/image/cartoon/言叶之庭.png);
+  background-size: cover;
+  background-position-y: -170px;
+}
+
+.rollbox:nth-child(3) {
+  opacity: 0;
+  background-image: url(./html/image/view/img\ \(5\).jpg);
+  background-size: cover;
+  background-position-y: -300px;
+}
+
+.rollbox:nth-child(4) {
+  opacity: 0;
+  background-image: url(./html/image/games/genshein.jpg);
+  background-size: cover;
+  background-position-y: -60px;
+}
+
+.rollbox:nth-child(5) {
+  opacity: 0;
+  background-image: url(./html/image/sport.png);
+  background-size: cover;
+  background-position-y: -100px;
+}
+
+.rollbox:nth-child(6) {
+  opacity: 0;
+  background-image: url(./html/image/pet/cat.jpg);
+  background-size: cover;
+  background-position-y: -120px;
+}
+
+.rollbox:nth-child(7) {
+  opacity: 0;
+  background-image: url(./html/image/music.jpg);
+  background-size: cover;
+  background-position-y: -60px;
+  margin-bottom: 40px;
+}
+
+/* 奇数 */
+.rollbox:nth-child(even) {
+  transform: translateX(-200%);
+  cursor: pointer;
+}
+
+/* 偶数 */
+.rollbox:nth-child(odd) {
+  transform: translateX(200%);
+  cursor: pointer;
+}
+
+.rollbox.show-center {
+  transform: translateX(0);
+  opacity: 1;
+}

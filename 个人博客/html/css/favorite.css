@@ -1,0 +1,579 @@
+body {
+  margin: 0 auto;
+  background: rgb(234,253,255)
+}
+
+.swiper {
+  position: relative;
+  margin-top: 10px;
+  width: 99vw;
+  height: 97vh;
+}
+
+.formation {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  height: 50px;
+  width: 300px;
+  font-size: 30px;
+  line-height: 50px;
+  padding-left: 30px;
+  background-color: rgba(10, 20, 161, 0.11);
+  font-family: sans-serif;
+  z-index: 999;
+  overflow: hidden;
+  animation: zoom_1 1s;
+}
+
+@keyframes zoom_1 {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.formation a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.formation:hover {
+  background-color: rgba(32, 211, 166, 0.11);
+}
+
+.formation a:hover {
+  color: #111;
+}
+
+.swiper-slide:nth-child(1) {
+  background-image: url(../image/view/img\ \(3\).jpg);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.swiper-slide:nth-child(2) {
+  background-image: url(../image/cartoon/声之形.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.swiper-slide:nth-child(3) {
+  background-image: url(../image/sport.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.swiper-slide:nth-child(4) {
+  background-image: url(../image/pet/cat.jpg);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.swiper-slide:nth-child(5) {
+  background-image: url(../image/games/genshein.jpg);
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* 第二页 */
+.secondpage {
+  position: relative;
+  width: 99vw;
+  height: 99vh;
+  background-image: url(../image/image.png);
+  background-size: cover;
+}
+
+/* 文字内容 */
+.fontformation h2{
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  font-size: 70px;
+  color: #fff;
+}
+.rightformation{
+  position: absolute;
+  right: 500px;
+  top: 200px;
+}
+/* 插入gif动画 */
+.rightimg{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.fontformation h2 .to{
+  position: relative;
+  margin-left: 100px;
+}
+/* arrows */
+.arrows {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+.arrow {
+  position: relative;
+  margin: auto;
+
+  width: 40px;
+  height: 40px;
+  border-top: 5px solid #fff;
+  border-left: 5px solid #fff;
+  transform: rotate(225deg);
+  z-index: 999;
+  animation: arrow-load 2s infinite;
+}
+
+.arrow:nth-child(1) {
+  top: 12px;
+  animation-delay: -0.4s;
+}
+
+.arrow:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow:nth-child(3) {
+  bottom: 12px;
+}
+
+@keyframes arrow-load {
+  0% {
+    opacity: 0;
+    transform: rotate(225deg) translate(30px, 30px);
+  }
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(225deg) translate(30px, 30px);
+  }
+}
+
+/* Animation */
+div.at-container {
+
+  position: relative;
+  margin-top: 0px;
+  margin-left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  color: rgb(167, 223, 203);
+  font-weight: bold;
+  font-size: 3em;
+  transition: transform 1s ease, opacity 0.5s linear;
+}
+
+.box:nth-child(n) {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.box.show-center {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* 动漫 */
+.thirdpage{
+  background: rgb(234,253,255);
+}
+
+.cartton{
+  margin: 0 auto;
+  padding: 0;
+  height: 100vh;
+  width: 98vw;
+}
+/* // Just for this sample */
+.page {
+  margin: 26px auto;
+  display: flex;
+  max-width: 100%;
+  background-color: #fff;
+}
+
+
+/* // Start here */
+.container {
+  margin-top: 0px;
+  width: 100%;
+  height: 92vh;
+  background: rgb(234,253,255);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.photo-container {
+  position: relative;
+  top: -90px;
+  /*Adjust */
+  left: -120px;
+  /* Adjust*/
+  transform: rotate(0deg);
+}
+
+.photo-cont-item {
+  display: flex;
+  width: calc(380px * 6);
+  /* 320px + 60px margin*/
+}
+
+.photo-item {
+  width: 320px;
+  height: 200px;
+  margin-right: 60px;
+  margin-bottom: 40px;
+  border-radius: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* // Every row */
+.animation-1 {
+  margin-top: 50px;
+  animation: scroller 40s linear infinite;
+  display: flex;
+  width: calc(380px * 12);
+}
+
+.animation-2 {
+  margin-left: 150px;
+  animation: scroller 30s linear infinite;
+  display: flex;
+  width: calc(380px * 12);
+}
+
+.animation-3 {
+  animation: scroller 50s linear infinite;
+  display: flex;
+  width: calc(380px * 12);
+}
+
+.animation-4 {
+  animation: scroller 40s linear infinite;
+  display: flex;
+  width: calc(380px * 12);
+}
+
+
+/* Animations */
+@keyframes scroller {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(calc(-380px * 6));
+      /*// 320px + 60px margin */
+  }
+}
+
+
+
+/* // All selected images */
+.photo-1 {
+  background-image: url(../image/cartoon/海贼王.jpg);
+}
+
+.photo-2 {
+  background-image: url(../image/cartoon/七龙珠.png);
+}
+
+.photo-3 {
+  background-image: url(../image/cartoon/刀剑圣域.jpg);
+}
+
+.photo-4 {
+  background-image: url(../image/cartoon/进击的巨人.png);
+}
+
+.photo-5 {
+  background-image: url(../image/cartoon/东京喰种.jpg);
+}
+
+.photo-6 {
+  background-image: url(../image/cartoon/斩赤红之瞳.jpg);
+}
+
+.photo-7 {
+  background-image: url(../image/cartoon/马达加斯加.jpg);
+}
+
+.photo-8 {
+  background-image: url(../image/cartoon/神偷奶爸.png);
+}
+
+.photo-9 {
+  background-image: url(../image/cartoon/神奇宝贝.png);
+}
+
+.photo-10 {
+  background-image: url(../image/cartoon/你的名字.png);
+}
+
+.photo-11 {
+  background-image: url(../image/cartoon/史迪奇.jpg);
+}
+
+.photo-12 {
+  background-image: url(../image/cartoon/言叶之庭.png);
+}
+
+.photo-13 {
+  background-image: url(../image/cartoon/我想吃掉你的胰脏.jpg);
+}
+
+.photo-14 {
+  background-image: url(../image/cartoon/天气之子.jpg);
+}
+
+.photo-15 {
+  background-image: url(../image/cartoon/你的名字.png);
+}
+
+.photo-16 {
+  background-image: url(../image/cartoon/声之形.png);
+}
+
+.photo-17 {
+  background-image: url(../image/cartoon/七龙珠.png);
+}
+
+.photo-18 {
+  background-image: url(../image/cartoon/斩赤红之瞳.jpg);
+}
+
+.photo-19 {
+  background-image: url(../image/cartoon/史迪奇.jpg);
+}
+
+.photo-20 {
+  background-image: url(../image/cartoon/天气之子.jpg);
+}
+
+.photo-21 {
+  background-image: url(../image/cartoon/声之形.png);
+}
+
+.photo-22 {
+  background-image: url(../image/cartoon/进击的巨人.png);
+}
+
+.photo-23 {
+  background-image: url(../image/cartoon/言叶之庭.png);
+}
+
+.photo-24 {
+  background-image: url(../image/cartoon/我想吃掉你的胰脏.jpg);
+}
+
+/* 第四页 */
+.forthpage{
+  position: relative;
+  width: 99vw;
+  height: 650px;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+  
+  .parent {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    width: 850px;
+    height: 420px;
+    }
+    
+    .item:nth-child(1) {
+       grid-area: 1 / 1 / 2 / 2; 
+       margin-top: 50px;
+       position: relative;
+       width: 200px;
+       height: 200px;
+       overflow: hidden;
+    }
+    .item:nth-child(2) {
+       grid-area: 1 / 2 / 2 / 3;
+       margin-top: 50px;
+       position: relative;
+       width: 200px;
+       height: 200px;
+       overflow: hidden; 
+    }
+    .item:nth-child(3) {
+       grid-area: 1 / 3 / 2 / 4; 
+       margin-top: 50px;
+       position: relative;
+       width: 200px;
+       height: 200px;
+       overflow: hidden;
+    }
+    .item:nth-child(4) {
+       grid-area: 1 / 4 / 2 / 5;
+       margin-top: 50px;
+       position: relative;
+       width: 200px;
+       height: 200px;
+       overflow: hidden; 
+    }
+    .item:nth-child(5) {
+       grid-area: 2 / 4 / 3 / 5; 
+       position: relative;
+       width: 200px;
+       height: 200px;
+       overflow: hidden;
+    }
+    .item:nth-child(6) { 
+      grid-area: 2 / 3 / 3 / 4; 
+      position: relative;
+      width: 200px;
+       height: 200px;
+       overflow: hidden;
+    }
+    .item:nth-child(7) {
+       grid-area: 2 / 2 / 3 / 3; 
+       position: relative;
+       width: 200px;
+       height: 200px;
+       overflow: hidden;
+    }
+    .item:nth-child(8) {
+       grid-area: 2 / 1 / 3 / 2; 
+       position: relative;
+       width: 200px;
+       height: 200px;
+       overflow: hidden;
+    }
+    .item img{
+      width: 200px;
+      height: 200px;
+      transition: all 0.6s;
+    }
+    .item-mask{
+      width: 200px;
+      height: 100px;
+      background-image: linear-gradient(180deg,rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6));
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      transition: all 0.5s;
+    }
+    .item-title{
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      position: absolute;
+      top: 150px;
+      left: 10px;
+      transition: all 0.5s;
+    }
+    .item-content{
+      color: #fff;
+      font-size: 12px;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      text-align: justify;
+      top:310px;
+      transition: all 0.5s;
+    }
+   .item:hover img{
+      transform: scale(1.2);
+    }
+    .item:hover .item-mask{
+      transform: scale(1.2);
+    }
+    .item:hover .item-title{
+      top: 90px;
+    }
+    .item:hover .item-content{
+      top:120px;
+    }
+    /* 第五页 */
+    .fifthpage{
+      width: 99%;
+      height: 100%;
+      margin: 0px;
+    }
+    /* 游戏&运动 */
+    .boxbottom{
+      text-align: center;
+      position: relative;
+      margin: 0 auto;
+      /* border: 1px solid red; */
+      width: 1240px;
+      height: 700px;
+      overflow: hidden;
+  }
+  .boxbottom ul{
+      list-style: none;
+  }
+  .boxbottom li{
+      float: left;
+      margin-right: 10px;
+      position: relative;
+      width: 400px;
+      height: 600px;
+      font-family: '楷体';
+      background-color: #87ceeb;
+      overflow: hidden;
+      background-size: cover;
+      transition: all 0.7s;
+  }
+  .boxbottom img{
+      cursor: pointer;
+      transition: all 0.7s;
+  }
+  .boxbottom .bottommask{
+      width: 400px;
+      height: 300px;
+      background-image: linear-gradient(180deg,rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6));
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      transition: all 0.5s;
+  }
+  .boxbottom .bottomtitle{
+      color: #fff;
+      font-weight: bold;
+      font-size: 50px;
+      position: absolute;
+      top: 500px;
+      left: 10px;
+      transition: all 0.7s;
+  }
+  .boxbottom .bottomcontent{
+      color: #fff;
+      font-size: 20px;
+      width: 400px;
+      height: 200px;
+      position: absolute;
+      text-align: justify;
+      top:620px;
+      transition: all 0.7s;
+  }
+  .boxbottom li:hover img{
+      transform: translateX(-100px);
+  }
+  .boxbottom li:hover .bottomtitle{
+      top: 300px;
+  }
+  .boxbottom li:hover .bottomcontent{
+      top: 450px;
+  }
